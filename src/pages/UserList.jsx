@@ -1,6 +1,6 @@
 import useFetchGet from "../hooks/useFetchGet";
 
-export default function UserListt() {
+export default function UserList() {
   const {
     data: users,
     loading: loadingUsers,
@@ -25,7 +25,7 @@ export default function UserListt() {
         </ol>
       )}
       <h2>Albums</h2>
-      <button>Get albums</button>
+      <button className="btn btn-primary">Get albums</button>
       <ol>
         {albums.map((album) => {
           return <li key={album.id}>{album.title}</li>;
