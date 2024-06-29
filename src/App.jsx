@@ -1,14 +1,16 @@
-import './App.css'
-import { List } from './pages/List'
-import UserListt from './pages/UserList'
+import "./App.css";
+import Counter from "./components/Counter";
+import { ListTasks } from "./pages/ListTasks";
+import UserList from "./pages/UserList";
 
 function App() {
   return (
     <>
-      {/* <List /> */}
-      <UserListt />
+      {/* <ListTasks /> */}
+      {/* <UserList /> */}
+      <Counter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
