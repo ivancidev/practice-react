@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import tasksValues from "../utils/tasks";
+import tasksValues from "../../utils/tasks";
 import { GoTasklist } from "react-icons/go";
-import AddTask from "../components/AddTask";
+import AddTask from "../../components/AddTask";
 
 const Item = ({ name, done }) => {
   return <li>{name}{done? "✅" : "❌"}</li>;

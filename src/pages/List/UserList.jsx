@@ -1,4 +1,4 @@
-import useFetchGet from "../hooks/useFetchGet";
+import useFetchGet from "../../hooks/useFetchGet";
 
 export default function UserList() {
   const {
