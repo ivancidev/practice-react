@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react";
-import { fetchGet } from "../services/api-jsonplaceholder/fetchService";
+import { fetchPokemonDetail, fetchPokemonList } from "../services/api-pokemon/pokemonService";
 
-export default function useFetchGet(route) {
+export default function useFetchGet(url) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
   const fetchData = async () => {
     try {
-        const response = await fetchGet(route);
-        setData(response);
+        const results = await fetchPokemonList(url);
+        const responseData = await Promise.all(
+          results.map(async (pokemon) => {
+            return await fetchPokemonDetail(pokemon.url);
+          })
+        )
+
+        setData(responseData);
         console.log(data);
     } catch (error) {
         setError(error);
