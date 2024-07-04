@@ -1,0 +1,28 @@
+
+.sectionCard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 20px; 
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 1200px) {
+    .myDiv {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .myDiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .myDiv {
+        grid-template-columns: 1fr;
+    }
+}
